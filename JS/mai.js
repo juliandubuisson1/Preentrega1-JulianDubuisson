@@ -25,4 +25,22 @@ if(imc < 18.5){
     alert('Usted tiene obesidad')
 }
 
+const productos = ["Entrenamiento Básico", "Entrenamiento Intermedio"];
+
+productos.push("Entrenamiento Avanzado");
+
+console.log(productos)
+
+const productosDetallados = [
+    {nombre: "Entrenamiento Báisco", precio: 300},
+    {nombre: "Entrenamiento Intermedio", precio: 500},
+    {nombre: "Entrenamiento Avanzado", precio: 700}
+]
+
+for (let i = 0; i < productosDetallados.length; i++) {
+    console.log("========================");
+    console.log("Nombre: " + productosDetallados[i].nombre);
+    console.log("Precio: " + productosDetallados[i].precio);
+}
+
 alert ('Vení a entrenar a Fit-Coach')
