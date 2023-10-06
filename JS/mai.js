@@ -9,11 +9,37 @@ function saludarConNombre(nombre){
 let nombreUsuario = prompt('Hola! Ingresa tu nombre');
 saludarConNombre(nombreUsuario);
 
-let peso = parseInt(prompt (nombreUsuario + ' ,ingresa tu peso en kilos (ej: 70)'))
-let altura = parseFloat(prompt('Ahora ingresa tu altura en metros (ej: 1.9)')) 
-imc= (peso / (altura * altura)).toFixed(2);
+let peso;
 
-alert(nombreUsuario + ' tu IMC es ' + imc)
+while (true) {
+peso = prompt(nombreUsuario + ", ingrese su peso (Ej. 80)");
+
+  // Intenta convertir la entrada a un número entero
+const numeroEntero = parseInt(peso);
+
+  // Verifica si la conversión fue exitosa y si el número es un entero
+if (!isNaN(numeroEntero) && numeroEntero == peso) {
+    break; // Salir del bucle si es un número entero válido
+} else {
+    alert("El número ingresado no es un número entero válido. Por favor, inténtelo de nuevo.");
+}
+}
+
+let altura;
+
+while(true){
+altura = prompt(nombreUsuario + ', ingrese su altura (Ej. 1.70)')
+const numeroFloat = parseFloat(altura);
+
+if(!isNaN(numeroFloat) && numeroFloat !== Math.floor(altura)){
+    break;
+}else{
+    alert("El número ingresado no es un número con decimales. Por favor, inténtelo de nuevo.");
+}
+}
+
+imc= (peso / (altura * altura)).toFixed(2);
+alert("Tu IMC es: " + imc);
 
 if(imc < 18.5){
     alert('Tu peso es inferior al normal');
@@ -23,7 +49,7 @@ if(imc < 18.5){
     alert('Usted tiene sobrepeso');
 }else{
     alert('Usted tiene obesidad')
-}
+} 
 
 const productos = ["Entrenamiento Básico", "Entrenamiento Intermedio"];
 
