@@ -29,10 +29,13 @@ let altura;
 
 while(true){
 altura = prompt(nombreUsuario + ', ingrese su altura (Ej. 1.70)')
+
+// Intenta convertir la entrada a un número float
 const numeroFloat = parseFloat(altura);
 
+// Verifica si la conversión fue exitosa y si el número es un float
 if(!isNaN(numeroFloat) && numeroFloat !== Math.floor(altura)){
-    break;
+    break; // Salir del bucle si es un número entero válido
 }else{
     alert("El número ingresado no es un número con decimales. Por favor, inténtelo de nuevo.");
 }
