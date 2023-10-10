@@ -3,7 +3,7 @@ for (let i = 0; i < 1; i++){
 }
 
 function saludarConNombre(nombre){
-    alert('Hola ' + nombre);
+    alert('Hola ' + nombre + ' necesito algunos datos tuyos');
 }
 
 let nombreUsuario = prompt('Hola! Ingresa tu nombre');
@@ -54,22 +54,39 @@ if(imc < 18.5){
     alert('Usted tiene obesidad')
 } 
 
-const productos = ["Entrenamiento Básico", "Entrenamiento Intermedio"];
 
-productos.push("Entrenamiento Avanzado");
+const entrenamientos = [
+    {
+        id:0, 
+        nombre: "Báisco", 
+        precio: 300,
+    },
 
-console.log(productos)
+    {
+        id:1, 
+        nombre: "Intermedio", 
+        precio: 500,
+    },
+];
 
-const productosDetallados = [
-    {nombre: "Entrenamiento Báisco", precio: 300},
-    {nombre: "Entrenamiento Intermedio", precio: 500},
-    {nombre: "Entrenamiento Avanzado", precio: 700}
-]
+entrenamientos.push({id: 2, nombre: "Avanzado", precio : 700});
 
-for (let i = 0; i < productosDetallados.length; i++) {
+
+/* for (let i = 0; i < entrenamientos.length; i++) {
     console.log("========================");
-    console.log("Nombre: " + productosDetallados[i].nombre);
-    console.log("Precio: " + productosDetallados[i].precio);
+    console.log("Nombre: " + entrenamientos[i].nombre);
+    console.log("Precio: " + entrenamientos[i].precio);
+} */
+
+const mostrarEntrenamientos = () => {
+    let mensaje =  'Entrenamientos: \n';
+    entrenamientos.map((entrenamiento) => {
+        mensaje += `Entrenamiento: ${entrenamiento.nombre} \nPrecio: ${entrenamiento.precio} \n ----------------------- \n` 
+    })
+    alert(mensaje);
 }
+
+
+mostrarEntrenamientos(); 
 
 alert ('Vení a entrenar a Fit-Coach')
