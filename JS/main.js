@@ -71,13 +71,6 @@ const entrenamientos = [
 
 entrenamientos.push({id: 2, nombre: "Avanzado", precio : 700});
 
-
-/* for (let i = 0; i < entrenamientos.length; i++) {
-    console.log("========================");
-    console.log("Nombre: " + entrenamientos[i].nombre);
-    console.log("Precio: " + entrenamientos[i].precio);
-} */
-
 const mostrarEntrenamientos = () => {
     let mensaje =  'Entrenamientos: \n';
     entrenamientos.map((entrenamiento) => {
