@@ -1,4 +1,4 @@
-/* for (let i = 0; i < 1; i++){
+for (let i = 0; i < 1; i++){
     alert('¿Queres saber tu Indice de Masa Corporal (IMC)?')
 }
 
@@ -55,7 +55,7 @@ if(imc < 18.5){
 }else{
     alert('Usted tiene obesidad')
 }
-*/
+
 
 
 //ARRAYS DE ENTRENAMIENTOS
