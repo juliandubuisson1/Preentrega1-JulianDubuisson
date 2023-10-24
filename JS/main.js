@@ -75,6 +75,9 @@ document.body.append(contenedor);
 console.log(contenedor);
 
 
+//---------------------------------------------------------
+
+
 //EVENTOS:
 
 //CALCULAR IMC
@@ -87,12 +90,23 @@ calcularButton.addEventListener("click", function() {
     const altura = parseFloat(document.getElementById("altura").value);
 
     calcularIndice(userName, peso, altura);
+
+    if (userName && peso && altura){
+        const data = {
+            userName,
+            peso,
+            altura,
+        }
+        localStorage.setItem('userTurn', JSON.stringify(data));
+        console.log(data);
+    }
 });
 document.getElementById('calcular-button').addEventListener('click', function(event) {
     event.preventDefault();
 });
 
 //-------------------------------------------------
+
 
 //COMPRAR ENTRENAMIENTOS
 
@@ -101,11 +115,21 @@ const botonesComprar = document.querySelectorAll('.comprar-boton');
 function compra() {
 
     const contenedor = this.closest('.box-container');
+    const user_name = document.getElementById("name").value
     const nombreEntrenamiento = contenedor.querySelector('h2').textContent;
     const precioEntrenamiento = contenedor.querySelector('p').textContent;
-    
 
-    alert(`Compraste el entrenamiento ${nombreEntrenamiento} por ${precioEntrenamiento}`);
+    if (contenedor && nombreEntrenamiento && precioEntrenamiento){
+        const entrenamientoData = {
+            user_name,
+            contenedor,
+            nombreEntrenamiento,
+            precioEntrenamiento,
+        }
+        localStorage.setItem('user', JSON.stringify(entrenamientoData));
+        console.log(entrenamientoData);
+    }
+
 }
 
 botonesComprar.forEach(boton => {
