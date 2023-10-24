@@ -1,63 +1,3 @@
-for (let i = 0; i < 1; i++){
-    alert('¿Queres saber tu Indice de Masa Corporal (IMC)?')
-}
-
-function saludarConNombre(nombre){
-    alert('Hola ' + nombre + ' necesito algunos datos tuyos');
-}
-
-let nombreUsuario = prompt('Hola! Ingresa tu nombre');
-saludarConNombre(nombreUsuario);
-
-let peso;
-
-while (true) {
-peso = prompt(nombreUsuario + ", ingrese su peso (Ej. 80)");
-
-  // Intenta convertir la entrada a un número entero
-const numeroEntero = parseInt(peso);
-
-  // Verifica si la conversión fue exitosa y si el número es un entero
-if (!isNaN(numeroEntero) && numeroEntero == peso) {
-    break; // Salir del bucle si es un número entero válido
-} else {
-    alert("El número ingresado no es un número entero válido. Por favor, inténtelo de nuevo.");
-}
-}
-
-let altura;
-
-while(true){
-altura = prompt(nombreUsuario + ', ingrese su altura (Ej. 1.70)')
-
-// Intenta convertir la entrada a un número float
-const numeroFloat = parseFloat(altura);
-
-// Verifica si la conversión fue exitosa y si el número es un float
-if(!isNaN(numeroFloat) && numeroFloat !== Math.floor(altura)){
-    break; // Salir del bucle si es un número entero válido
-}else{
-    alert("El número ingresado no es un número con decimales. Por favor, inténtelo de nuevo.");
-}
-}
-
-//CALCULO DE IMC
-
-imc= (peso / (altura * altura)).toFixed(2);
-alert("Tu IMC es: " + imc);
-
-if(imc < 18.5){
-    alert('Tu peso es inferior al normal');
-}else if(imc >= 18.5 && imc <= 24.9){
-    alert('Tu peso es normal');
-}else if (imc >= 25 && imc <= 29.9){
-    alert('Usted tiene sobrepeso');
-}else{
-    alert('Usted tiene obesidad')
-}
-
-
-
 //ARRAYS DE ENTRENAMIENTOS
 const entrenamientos= [
     {
@@ -82,22 +22,39 @@ const entrenamientos= [
     },
 ];
 
+//MUESTRAS DE JS EN HTML:
 
-const mostrarEntrenamientos = () => {
-    let mensaje =  'Entrenamientos: \n';
-    entrenamientos.map((entrenamiento) => {
-        mensaje += `Entrenamiento: ${entrenamiento.nombre} \nPrecio: ${entrenamiento.precio} \n ----------------------- \n` 
-    })
-    alert(mensaje);
-};
+//CALCULO DE IMC
+const imcBox = document.querySelector(".imc-box")
 
+{imcBox.innerHTML = `
+    <div class= "box-imc">
+        <p class="parrafo-imc"> Calcula tu IMC</p>
+        <form class="box-form">
+            <ul>
+                <li>
+                    <label class= "name-box" for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" placeholder="Nombre"/ required>
+                </li>
 
-mostrarEntrenamientos(); 
+                <li>
+                    <label class="peso-box" for="peso">Peso (kg):</label>
+                    <input type="text" id="peso" name="user_name" placeholder="90" required  />
+                </li>
+                <li>
+                    <label class="altura-box" for="altura">Altura(mts):</label>
+                    <input type="text" id="altura" name="user_name" placeholder="1.70" required" />
+                </li>
+                <button id="calcular-button">Calcular
+            </ul>
+            <h2 id="resultado">Tu resultado es: </h2>
+        </form>   
+    </div> 
+`}
 
-alert ('Vení a entrenar a Fit-Coach') 
+//-----------------------------------------------------------
 
-
-//MUESTRA DE LOS ENTRENAMIENTOS EN EL HTML
+//ENTRENAMIENTOS
 
 let contenedor = document.createElement("div");
 
@@ -118,22 +75,56 @@ document.body.append(contenedor);
 console.log(contenedor);
 
 
-//EVENTOS DEL BOTON COMPRAR ENTRENAMIENTOS
+//EVENTOS:
+
+//CALCULAR IMC
+
+const calcularButton = document.getElementById("calcular-button");
+
+calcularButton.addEventListener("click", function() {
+    const userName = document.getElementById("name").value;
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altura = parseFloat(document.getElementById("altura").value);
+
+    calcularIndice(userName, peso, altura);
+});
+document.getElementById('calcular-button').addEventListener('click', function(event) {
+    event.preventDefault();
+});
+
+//-------------------------------------------------
+
+//COMPRAR ENTRENAMIENTOS
 
 const botonesComprar = document.querySelectorAll('.comprar-boton');
 
-function Compra() {
-    // Tu código para manejar la compra aquí
-    // Puedes acceder a los datos del entrenamiento relacionado usando el DOM
+function compra() {
+
     const contenedor = this.closest('.box-container');
     const nombreEntrenamiento = contenedor.querySelector('h2').textContent;
     const precioEntrenamiento = contenedor.querySelector('p').textContent;
     
-    // Ejemplo de lo que puedes hacer con los datos
-    console.log(`Compraste ${nombreEntrenamiento} por ${precioEntrenamiento}`);
+
+    alert(`Compraste el entrenamiento ${nombreEntrenamiento} por ${precioEntrenamiento}`);
 }
 
-// Agrega el evento "click" a cada botón
 botonesComprar.forEach(boton => {
-    boton.addEventListener('click', Compra);
+    boton.addEventListener('click', compra);
 });
+
+
+//FUNCIONES:
+
+//CALCULAR EL IMC:
+
+function calcularIndice(userName, peso, altura) {
+    // Verificar si el peso es un número entero y la altura es un número decimal
+    if (!Number.isNaN(peso) && Number.isInteger(Number(peso)) && !Number.isNaN(altura) && !Number.isInteger(Number(altura))) {
+        const resultado = `${userName} tu IMC es: ${(peso / (altura * altura)).toFixed(2)}`;
+        // Muestra el resultado en el div con id "resultado"
+        document.getElementById("resultado").textContent = resultado;
+    } else {
+        // Mostrar un mensaje de error si los valores no son válidos
+        document.getElementById("resultado").textContent = "Por favor, ingresa valores válidos.";
+    }
+}

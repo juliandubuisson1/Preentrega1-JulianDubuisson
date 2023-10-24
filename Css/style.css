@@ -173,8 +173,80 @@ body{
 }
 
 
-/*PLANES*/
+/*IMC*/
 
+.imc-box{
+    background-color: #599af0;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    border-radius: 3rem;
+    margin-top: 1rem;
+}
+
+.parrafo-imc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+li{
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+.name-box{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.peso-box{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.altura-box{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+
+}
+
+input::placeholder{
+    font-weight: bolder;
+    font-style:oblique;
+    padding-left: 0.5rem;
+}
+
+#calcular-button{
+    margin-top: 1rem;
+    width: 7rem;
+    height: 2rem;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    background-color: #f17575;
+    border-radius: 1rem;
+    
+}
 
 
 /*HR*/
@@ -189,11 +261,11 @@ hr{
 body div{
     display: flex;
     flex-wrap: wrap;
-/*     width: 100%; */
     padding: 20px;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 2rem;
 }
 
 .box-container{
@@ -207,12 +279,14 @@ body div{
     justify-content: center;
     padding: 1rem;
     margin: 0 auto;
+    border-radius: 2rem;
 }
 
 .box-container img{
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 2rem;
 }
 
 .box-container-body{
@@ -223,6 +297,16 @@ body div{
     align-items: flex-start;
     gap: 10px;
     align-items: center;
+}
+
+.box-container h2{
+    color: red;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 2rem;
+    width: 100%;
+    background-color: #fff;
 }
 
 .box-container p{
