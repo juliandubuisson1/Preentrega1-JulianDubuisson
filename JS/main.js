@@ -158,33 +158,6 @@ function calcularIndice(userName, peso, altura) {
 }
 
 //API
-/* const sectionMuscle = document.querySelector('#contenedorMuscle');
-
-function getData(){
-    fetch('./js/muscle.json')
-        .then(res => {
-            if(!res.ok){
-                throw new Error ('Hubo un error al obtener los datos');
-            }
-            return res.json()
-        })
-        .then (data => console.log(data.entries))
-        .catch(error => console.log('Hubo un error', error));
-}
-
-function showExercise(data){
-    console.log(data);
-    let article = document.createElement('article');
-    article.setAttribute('class', 'container')
-    data.forEach(m => {
-        article.innerHTML = `<p> Musculo: ${m.name} </p>`;
-
-        sectionMuscle.append(article);
-    });
-
-}
-
-getData() */
 
 const sectionMuscle = document.querySelector('#contenedorMuscle');
 
@@ -205,12 +178,17 @@ function showExercise(data) {
     data.forEach(m => {
         let article = document.createElement('article');
         article.setAttribute('class', 'container');
-        article.innerHTML = `<p> Musculo: ${m.name} </p>
+        article.innerHTML = `<p> <span>Musculo</span></p> 
+                            <p>${m.name} </p>
                             <img src=${m.img} alt="imagen del musculo">
-                            <p>Ejercicio: ${m.exercise.ex1}</p>
-                            <p>Descripción: ${m.exercise.description}</p>
-                            <p>Repeticiones: ${m.exercise.repetitions}</p>
-                            <p>Series: ${m.exercise.series}</p>
+                            <p><span>Ejercicio</span></p>
+                            <p>${m.exercise.ex1}</p>
+                            <p><span>Descripción</span></p>
+                            <p>${m.exercise.description}</p>
+                            <p><span>Repeticiones</span></p>
+                            <p>${m.exercise.repetitions}</p>
+                            <p><span>Series</span></p>
+                            <p>${m.exercise.series}</p>
                             `;
         sectionMuscle.append(article);
     });
