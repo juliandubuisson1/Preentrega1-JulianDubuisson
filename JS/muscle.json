@@ -1,0 +1,136 @@
+{
+    "entries" : [
+    {
+        "id": 1,
+        "name": "Pectorales",
+        "img" : "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuhmQ2d8mRPbpbV5iFVIYry9_R3rdy4uWESunuwsn6RLLjIOXF",
+        "exercise":{
+            "ex1":"Push-up",
+            "video-ex": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-push-up-side.mp4#t=0.1",
+            "description": "La posición inicial consiste en mantenerse mirando hacia el suelo, apoyándose únicamente con la punta de los pies y las palmas de las manos. A continuación, se flexionan los brazos hasta rozar el suelo con el pecho pero sin llegar a apoyarlo contra este. Finalmente, se vuelve a la posición inicial estirando los brazos y manteniendo la espalda recta y paralela al movimiento en todo momento.",
+            "series": "Series: 3",
+            "repetitions": "Repeticiones: 7"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Biceps",
+        "img" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSSQrISR0AwjLnTGzwGXNxy4sWPEfSHo6KBqJ09L1WiA8qBlGWF",
+        "exercise":{
+            "ex1":"Curl Biceps",
+            "video-ex": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-curl-side.mp4#t=0.1",
+            "description": "Párese derecho con una mancuerna en cada mano con el brazo extendido, levante una mancuerna y gire el antebrazo hasta que quede vertical y la palma mire hacia el hombro, baje a la posición original y repita con el brazo opuesto.",
+            "series": "Series: 4",
+            "repetitions": "Repeticiones: 10"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Abdominales",
+        "img" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSmoqPtbNBqQfGiVvIkWgUtG9pdNa8gCutP9CGp0y3pQuiNMq3T",
+        "exercise":{
+            "ex1":"Plancha",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-hand-plank-side_GnZ2NZh.mp4#t=0.1",
+            "description": "Con ambas palmas y puntas de pies apoyados en el piso, deberá manter la espalda recta en esta posición ",
+            "series:":"Series: 3",
+            "repetitions": "Tiempo: 15 - 20 segundos"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Cuadriceps",
+        "img" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTnda5IQVyG7xxs99rqyIf9HYf6cgnvLIFyetRB1-yk8LWi0QXn",
+        "exercise":{
+            "ex1":"Sentadillas",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bodyweight-squat-side.mp4#t=0.1",
+            "description": "Párese con los pies separados a la altura de los hombros, flexione las rodillas y la espalda mantengala recta. Extienda las rodillas nuevamente",
+            "series":"Series: 4",
+            "repetitions": "Repeticiones: 7"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Deltoides",
+        "img" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR82IWAaCTLHTsuRRbp3xRYxnkovERf9Q251w5KmM-u6bIdMjH4",
+        "exercise":{
+            "ex1":"Press de hombro",
+            "video-ex": "https://media.musclewiki.com/media/uploads/videos/branded/male-barbell-overhead-press-side_1DIUbfS.mp4#t=0.1",
+            "description": "Tome un agarre aproximadamente al ancho de los hombros. Debe haber una línea recta desde el codo hasta el puños(antebrazos verticales). Presione hasta que los codos estén extendidos y empuje la cabeza ligeramente hacia adelante.Vuelve a la posición inicial con control. Tirando de la barbilla hacia atrás para permitir que la barra pase por la cara de forma segura.",
+            "series":"Series: 3",
+            "repetitions": "Repeticiones: 10"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Trapecio",
+        "img" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS1TWfaycDZUKFS_HXnFxlcFSMm6K3pM-4pIkd4GHVvKnaTh_l7",
+        "exercise":{
+            "ex1":"Encogimiento de hombros",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-dumbbell-seated-shrug-front.mp4#t=0.1",
+            "description": "Sentado en un banco con mancuernas en ambas manos, eleve los hombros y mantenga la posición contraida por 2 segundos, baje lentamente los hombros hasta la posición inicial",
+            "series":"Series: 4",
+            "repetitions": "Repeticiones: 10"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Triceps",
+        "img" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAXYa_IDV419NscGbauJSiGUTp8TG28sWH5HvQ59e1GkCz7IuD",
+        "exercise":{
+            "ex1":"Bench Dips",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-tricep-dips-side.mp4#t=0.1",
+            "description": "Agarre el borde del banco con sus manos. Mantenga los pies juntos y las piernas extiradas, baje el cuerpo y luego vuelva a la posición inicial",
+            "series":"Series: 3",
+            "repetitions": "Repeticiones: 7"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Lumbar",
+        "img" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLPpGg4vtJ4NaU_b4LOk03JAZTWRDMavUDx2EkIDLN66kOzGzZ",
+        "exercise":{
+            "ex1":"Superman",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-superman-side.mp4#t=0.1",
+            "description": "Acuéstese boca abajo en el suelo con los brazos completamente extendidos hacia adelante, al mismo tiempo levante los brazos, las piernas y el pecho del suelo y mantenga la posición. Baje lentamente los brazos, las piernas y el pecho hasta la posición inicial",
+            "series":"Series: 4",
+            "repetitions": "Repeticiones: 7"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Glúteo",
+        "img" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRxCXTGmN88JMJTtPXEb3bLWaCbXIH7cuDXa2jUE5VAthGk2mNq",
+        "exercise":{
+            "ex1":"Estocada",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-forward-lunges-side.mp4#t=0.1",
+            "description": "Da un paso adelante con una pierna, baje el cuerpo hasta que la rodilla trasera casi toque el suelo (Asegúrese de permanecer erguido y de que la rodilla delantera permanezca por encima del pie delantero.). Empuja el suelo con el pie delantero hasta volver a la posición inicial. Cambia de pierna.",
+            "series":"Series: 3",
+            "repetitions": "Repeticiones: 7 con cada pierna"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Isquiotibiales",
+        "img" : "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSmkNqsDIrzdR9QyL3kiI7OARyooDaK3COZ4yTOPH9Wpf0iYdUd",
+        "exercise":{
+            "ex1":"Peso muerto con una pierna",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-single-legged-romanian-deadlifts-side.mp4#t=0.1",
+            "description": "Párese con los pies separados a la altura de los hombros y las rodillas ligeramente flexionadas y levante una pierna. Sin cambiar la curvatura de la rodilla, doble las caderas y baje el torso hasta que quede casi paralelo al suelo.Tensa tus glúteos y luego regresa a la posición inicial.",
+            "series":"Series: 3",
+            "repetitions": "Repeticiones: 5 con cada pierna"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Tríceps sural (gemelo)",
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgwKdAzNijGTZzMp8TJPXWk7TqCiMu_kQQVCMSGI0CLj0uOrBF",
+        "exercise":{
+            "ex1":"Elevaciones de pantorrillas",
+            "video-ex":"https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-calf-raises-side.mp4#t=0.1",
+            "description": "Equilibre las puntas de los pies sobre la plataforma o las placas, inclinándose hacia adelante para usar la pared para ayudar con el equilibrio. Baje los talones de los pies hacia el suelo y haga una pausa, luego empuje las puntas de los pies como si estuviera de puntillas, deteniéndose en la cúspide del movimiento.",
+            "series":"Series: 4",
+            "repetitions": "Repeticiones: 10"
+        }
+    }
+    ]
+}
