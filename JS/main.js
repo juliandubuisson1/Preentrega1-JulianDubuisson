@@ -27,7 +27,7 @@ const entrenamientos= [
 //CALCULO DE IMC
 const imcBox = document.querySelector(".imc-box")
 
-{imcBox.innerHTML = `
+imcBox.innerHTML = `
     <div class= "box-imc">
         <p class="parrafo-imc"> Calcula tu IMC</p>
         <form class="box-form">
@@ -50,7 +50,7 @@ const imcBox = document.querySelector(".imc-box")
             <h2 id="resultado">Tu resultado es: </h2>
         </form>   
     </div> 
-`}
+`
 
 //-----------------------------------------------------------
 
@@ -111,6 +111,7 @@ document.getElementById('calcular-button').addEventListener('click', function(ev
 //COMPRAR ENTRENAMIENTOS
 
 const botonesComprar = document.querySelectorAll('.comprar-boton');
+const compraActualContainer = document.getElementById('compraActual');
 
 function compra() {
 
@@ -126,20 +127,37 @@ function compra() {
             nombreEntrenamiento,
             precioEntrenamiento,
         }
+
+        mostrarCompraActual(entrenamientoData);
+
         localStorage.setItem('user', JSON.stringify(entrenamientoData));
         Toastify({
             text: "Compra exitosa 👌",
             className:"toastify",
-            backgroundColor: "#db9487",
+            style: {
+                background: '#db9487'
+            }
         }).showToast();
     }
 
+}
+
+function mostrarCompraActual(entrenamientoData) {
+    compraActualContainer.innerHTML = `
+        <h3>Compra Actual:</h3>
+        <p>${entrenamientoData.user_name}</p>
+        <p>Entrenamiento: ${entrenamientoData.nombreEntrenamiento}</p>
+        <p>Precio: ${entrenamientoData.precioEntrenamiento}</p>
+    `;
 }
 
 botonesComprar.forEach(boton => {
     boton.addEventListener('click', compra);
 });
 
+
+
+//-------------------------------------------------
 
 //FUNCIONES:
 
@@ -156,6 +174,8 @@ function calcularIndice(userName, peso, altura) {
         document.getElementById("resultado").textContent = "Por favor, ingresa valores válidos.";
     }
 }
+
+//-------------------------------------------------
 
 //API
 
@@ -178,7 +198,8 @@ function showExercise(data) {
     data.forEach(m => {
         let article = document.createElement('article');
         article.setAttribute('class', 'container');
-        article.innerHTML = `<p> <span>Musculo</span></p> 
+        article.innerHTML = `<div class="containerMuscle">
+                            <p> <span>Musculo</span></p> 
                             <p>${m.name} </p>
                             <img src=${m.img} alt="imagen del musculo">
                             <p><span>Ejercicio</span></p>
@@ -189,9 +210,12 @@ function showExercise(data) {
                             <p>${m.exercise.repetitions}</p>
                             <p><span>Series</span></p>
                             <p>${m.exercise.series}</p>
+                            </div>
                             `;
         sectionMuscle.append(article);
     });
 }
 
 getData();
+
+

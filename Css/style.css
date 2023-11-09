@@ -375,17 +375,60 @@ body div{
     border-bottom: #ee6767;
 }
 
+#compraActual{
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+#compraActual h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#compraActual p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 /*API*/
+
+.musculos{
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ee6767;
+    padding: 2rem;
+}
+
+.containerMuscle{
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    border: #ee6767 solid 0.5rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+}
 
 #contenedorMuscle{
     display: grid;
-    grid-template-columns: repeat(auto, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 2rem;
     gap: 2rem;
-}
+} 
 
 #contenedorMuscle p{
     text-align:center;
