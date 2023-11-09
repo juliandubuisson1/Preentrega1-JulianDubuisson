@@ -72,7 +72,7 @@ for ( const entrenamiento of entrenamientos) {
 }
 
 document.body.append(contenedor);
-console.log(contenedor);
+
 
 
 //---------------------------------------------------------
@@ -98,7 +98,7 @@ calcularButton.addEventListener("click", function() {
             altura,
         }
         localStorage.setItem('userTurn', JSON.stringify(data));
-        console.log(data);
+
     }
 });
 document.getElementById('calcular-button').addEventListener('click', function(event) {
@@ -190,11 +190,10 @@ function getData() {
             return res.json();
         })
         .then(data => showExercise(data.entries))
-        .catch(error => console.log('Hubo un error', error));
+        .catch(error);
 }
 
 function showExercise(data) {
-    console.log(data);
     data.forEach(m => {
         let article = document.createElement('article');
         article.setAttribute('class', 'container');
